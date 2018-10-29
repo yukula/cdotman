@@ -83,7 +83,7 @@ function(dot_install)
         foreach(target IN LISTS DOT_INSTALL_TARGETS)
             # check if fily already exists and date of changing
             message("${DOT_TARGET_${target}}")
-            install(FILES ${DOT_TARGET_${target}} DESTNATION ${DOT_INSTALL_DESTINATION}/)
+            install(FILES ${DOT_TARGET_${target}} DESTINATION ${DOT_INSTALL_DESTINATION}/)
         endforeach()
     endif()
 
