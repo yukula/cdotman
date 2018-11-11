@@ -1,0 +1,5 @@
+function(cdotman_trace_debug)
+    if(CDOTMAN_TRACE_DEBUG)
+        message(STATUS "[DEBUG] " ${ARGV})        
+    endif()
+endfunction()
