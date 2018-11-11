@@ -1,0 +1,5 @@
+function(cdotman_trace_error)
+    if(CDOTMAN_TRACE_DEBUG)
+        message(FATAL_ERROR "[ERROR] " ${ARGV})        
+    endif()
+endfunction()

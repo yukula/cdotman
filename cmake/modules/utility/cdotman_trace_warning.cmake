@@ -1,0 +1,5 @@
+function(cdotman_trace_warning)
+    if(CDOTMAN_TRACE_INFO)
+        message(WARNING "[WARN] " ${ARGV})        
+    endif()
+endfunction()
