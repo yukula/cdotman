@@ -1,7 +1,7 @@
 function(cdotman_init_target target_name)
     set(prefix CDOTMAN_TARGET)
     set(src SOURCES)
-    set(dist DISTINATION)
+    set(dest DESTINATION)
     set(type TYPE)
 
     if(NOT ARGC EQUAL 1)
@@ -14,7 +14,7 @@ function(cdotman_init_target target_name)
     define_property(GLOBAL PROPERTY ${prefix}_${src}
                     BRIEF_DOCS "List of target sources"
                     FULL_DOCS "List of target sources")
-    define_property(GLOBAL PROPERTY ${prefix}_${dist}
+    define_property(GLOBAL PROPERTY ${prefix}_${dest}
                     BRIEF_DOCS "Absolute path of target installation"
                     FULL_DOCS "Absolute path of target installation")
     define_property(GLOBAL PROPERTY ${prefix}_${type}
