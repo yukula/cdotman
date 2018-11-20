@@ -22,7 +22,7 @@ function(cdotman_configure_target target)
                 cdotman_trace_error("target_fname is empty")
             endif()
             configure_file(${src} ${target_file} @ONLY)
-
+            cdotman_trace_debug("cdotman_configure_target: Target \"${target}\" was configured")
             # an update of target sources
             set(src_list_tmp ${src_list})
             list(REMOVE_ITEM src_list_tmp ${src})
