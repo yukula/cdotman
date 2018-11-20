@@ -25,7 +25,7 @@ function(cdotman_set_target_property target)
     
     cdotman_is_target_exist(is_target_exist ${target})
     if(NOT ${is_target_exist})
-        cdotman_trace_error("<target> \"${target}\" is not exist")
+        cdotman_trace_error("<target> \"${target}\" does not exist")
     endif()
 
     set(prop_prefix CDOTMAN_TARGET)
@@ -39,6 +39,6 @@ function(cdotman_set_target_property target)
     endif()
     
     cdotman_get_target_property(new_prop ${target} ${prop})
-    cdotman_trace_debug("set_arget_property: ${prop_prefix}_${target}_${prop} was updated to: ${new_prop}")
+    cdotman_trace_debug("set_target_property: ${prop_prefix}_${target}_${prop} was updated to: ${new_prop}")
 
 endfunction()
