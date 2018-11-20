@@ -7,6 +7,7 @@ include(cdotman_is_target_exist)
 include(cdotman_get_target_property)
 include(cdotman_set_target_property)
 include(cdotman_get_target_properties)
+include(cdotman_is_target_complete)
 
 # configure
 include(cdotman_is_template)

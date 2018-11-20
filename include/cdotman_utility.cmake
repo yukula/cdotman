@@ -11,3 +11,5 @@ include(cdotman_symlink_to)
 include(cdotman_is_symlink)
 include(cdotman_symlink_create)
 include(cdotman_symlink_remove)
+
+include(cdotman_list_to_str)
