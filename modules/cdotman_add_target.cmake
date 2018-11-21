@@ -20,16 +20,18 @@ function(cdotman_add_target target)
         endif()
     endif()
 
+    cdotman_init_target(${target})
+
     foreach(src IN LISTS ${pref}_UNPARSED_ARGUMENTS)
         get_filename_component(src_abs ${src} ABSOLUTE)
         if(NOT EXISTS ${src_abs})
             cdotman_trace_error("File \"${src_abs}\" specified as source does not exist")
+        else()
+            cdotman_set_target_property(${target} PROPERTY SOURCES APPEND ${src_abs})
         endif()
     endforeach()
     
 
-    cdotman_init_target(${target})
-    cdotman_set_target_property(${target} PROPERTY SOURCES ${ARG_UNPARSED_ARGUMENTS})
 
     if(ARG_INCLUDE)
         include(${include_path})
