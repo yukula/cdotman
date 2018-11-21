@@ -18,9 +18,7 @@ function(cdotman_set_target_property target)
     if(NOT ${prefix}_UNPARSED_ARGUMENTS)
         cdotman_trace_error("Required argument <value> wasn't specified")
     endif()
-    if(NOT unparsed_length EQUAL 1)
-        cdotman_trace_error("Incorrect arguments for function call")
-    endif()
+
     string(TOUPPER ${target} target)
     
     cdotman_is_target_exist(is_target_exist ${target})
