@@ -13,3 +13,4 @@ include(cdotman_symlink_create)
 include(cdotman_symlink_remove)
 
 include(cdotman_list_to_str)
+include(cdotman_track_file)
